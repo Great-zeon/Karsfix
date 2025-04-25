@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <title>Content Manager</title>
     <script src="https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"></script>
   </head>
   <body>
+    <div id="cms"></div> <!-- This is where Netlify CMS will load -->
+    
+    <script>
+      // Initialize Netlify CMS when the DOM is ready
+      window.addEventListener("load", function() {
+        // Initialize the CMS
+        if (window.NetlifyCmsApp) {
+          window.NetlifyCmsApp.init();
+        }
+      });
+    </script>
   </body>
 </html>
